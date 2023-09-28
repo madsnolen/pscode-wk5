@@ -10,7 +10,6 @@ printf("The sum of x plus y is " + z);
 // Exercise 2: Check if a Number is Even or Odd
 
 (Your pseudocode here)
-using namespace std;
 
 int num;
 printf("Please enter a number: ");
