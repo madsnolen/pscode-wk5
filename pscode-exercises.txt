@@ -1,25 +1,36 @@
 // Exercise 1: Calculate the Sum of Two Numbers
 
 (Your pseudocode here)
-int x = 2;
-int y = 5;
-int z = x + y;
-printf("The sum of x plus y is " + z);
+
+// I want to use integers because integers store values such as numbers.
+// Calculating the sum I would add two values to equal another value.
+// I want to then print out the statement with the sum
+
+int x = 2; // integer 1
+int y = 5; // integer 2
+int z = x + y; // SUM
+printf("The sum of x plus y is " + z); // print statment
 
 
 // Exercise 2: Check if a Number is Even or Odd
 
 (Your pseudocode here)
+// With C++ code
+// initiate an integer that is num. integer taking in a value that the user inputs.
+// using if statements
+// if a num has a remainder (%) after dividing it with num and 2 equal == 0 then it is even. 
+// else it will be an odd number.
 
-int num;
-printf("Please enter a number: ");
-cin >> num;
- if(num % 2 == 0)
+int num;                           // integer
+printf("Please enter a number: "); // print statement asking for input
+cin >> num;                        // users actual input
+
+ if(num % 2 == 0)   // I am using open and closed brackets because I am closing these statements so they are essetnially "their own" just like how it would be bracketed in a main function
  {
-  cout << num << " is an even number!" << endl;
+  cout << num << " is an even number!" << endl;        // print statements
  }
  else{
-  cout << num << " is a odd number!" << endl;
+  cout << num << " is a odd number!" << endl;          // print statements
  }
 }
 
@@ -33,48 +44,60 @@ d) Write out the results found from steps b and c with a message describing what
 
 (Your pseudocode here)
 
-int a, b, c, d, e, avg;
+// Initiate 5 integers (a, b, c, d, e) for the input of values
+// Inititate integer avg because it will be the value of the average of all the integers that were input by the user
+// I wanted to make functions so that the values can be read in the function to be able to "go through" all the values
+// Comparing the user input values to determine which is Min and Max.
+// Two seperate functions going into this code
+// One function will be to compare all values that were input with if statements to weave out to find the min
+// Other function will do the same comparing all the values that were input and use if statements to find the max
+// The two functions if working with C++ would go above main. Because they will be called back into main. 
+// the avg int value is going to store/equal all 5 values added up and divided by 5 to find the average.
 
-avg = ((a+b+c+d+e)/5);
 
-cin >> a >> b >> c >> d >> e; //input from the users
+int a, b, c, d, e, avg;                                  		 // integer values
 
-int MaxNumber(a, b, c, d, e){ //FUNCTION
-   int maxNum = a; // variable in function setting it to MAX to compare
-   if( b > maxNum){ // if b is bigger than  MAX then b max
+avg = ((a+b+c+d+e)/5);                                    		// this is the value to find the average
+
+cin >> a >> b >> c >> d >> e; 						 //input from the users
+
+int MaxNumber(a, b, c, d, e){ 						//FUNCTION FOR MAX NUM
+   int maxNum = a; 							// variable in function setting it to MAX to compare
+   if( b > maxNum){ 							// if b is bigger than  MAX then b max
       maxNum = b;
    }
-   if(c > maxNum){ // if c is bigger than  MAX then c max
+   if(c > maxNum){ 							// if c is bigger than  MAX then c max
       maxNum = c;
    }
-   if(d > maxNum){ // if d is bigger than  MAX then d max
+   if(d > maxNum){ 							// if d is bigger than  MAX then d max
       maxNum = d;
    }
-   if(e > maxNum){ // if e is bigger than MAX then e max
+   if(e > maxNum){ 					                // if e is bigger than MAX then e max
    }
       return maxNum;
 }
 
-int MinNumber(a, b, c, d, e){ // function for Min
-   int minNum = a; // I tried at first setting minNum as an int and then define it in if statement
-                      // had to initiate the first num as min so it can be compared throughout the line
-   if(b<minNum){ //if b is less than  MIN then min b
+int MinNumber(a, b, c, d, e){ // function for Min			//FUNCTION FOR MIN NUM
+   int minNum = a; 							// variable in function setting it to MAX to compare	
+                      							
+   if(b<minNum){ //if b is less than  MIN then min b 			// if b is smaller than  MIN then b min
       minNum = num2;
    }
-   if(c < minNum){ //if c is less than  MIN then min c
+   if(c < minNum){ //if c is less than  MIN then min c  		// if c is smalller than  MIN then c min
       minNum = num3;
    }
-   if(d < minNum){ //if d is less than  MIN then min d
+   if(d < minNum){ //if d is less than  MIN then min d      		 // if d is smaller than  MIN then d min
       minNum = d;
    }
-   if(e < minNum){ // if e is less than MIN then min e
+   if(e < minNum){ // if e is less than MIN then min e 			// if e is smaller than MIN then e min
    }
       return minNum;
 }
 
-cout << "Maximum is " << MaxNumber(a, b, c, d, e) << endl; // Function used for input answers
+cout << "Maximum is " << MaxNumber(a, b, c, d, e) << endl;  // In this statment after it is calling back the function MaxNumber to be able to compare all the input values (a, b, c, d, e)
 
-cout << "Minimum is " << MinNumber(a, b, c, d, e) << endl; // Function used for input answers
+cout << "Minimum is " << MinNumber(a, b, c, d, e) << endl;   // In this statment after it is calling back the function MinNumber to be able to compare all the input values (a, b, c, d, e)
 
-cout << "The average is " << avg << endl;
+
+cout << "The average is " << avg << endl;                   // In this statment the output is going to say the avgerage. It is calling back the value of avg 
 -- END --
